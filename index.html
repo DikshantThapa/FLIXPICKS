@@ -23,9 +23,9 @@
                     <ul>
                         <li><a href="#">Browse</a></li>
                         <li><a href="#">New Seasons</a></li>
-                        <li><a href="#">Watch list</a></li>
-                        <button><a href=#>SignUp</a></button>
-                        <button><a href=#>LogIn</a></button>
+                        <li><a href="#">New Movies</a></li>
+                        <button id="SignUp-button"><a href=#>SignUp</a></button>
+                        <button id="Login-button"><a href=#>LogIn</a></button>
                     </ul>
                 </nav>
             </div>
@@ -37,5 +37,17 @@
             </div>
             </div>
         </div>
+
+        <script>
+            document.getElementById('Login-button').addEventListener('click', function() {
+                window.location.href = 'login_page.html'; // Redirect to signin.html
+            });
+        </script>
+
+         <script>
+            document.getElementById('SignUp-button').addEventListener('click', function() {
+                window.location.href = 'signup.html'; // Redirect to signin.html
+            });
+        </script>
     </body>
 </html>

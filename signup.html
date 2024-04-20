@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FLIXPIX SignUp page</title>
+        <link rel="stylesheet" href="signup.css">
+    </head>
+    <body>
+        <div class="header">
+        <nav>
+            <div class="logo">
+                <p class="logo-1">F</p>
+                <p class="logo-2">lix</p>
+                <p class="logo-1">P</p>
+                <p class="logo-2">ix</p>
+            </div>
+        </nav>
+        <div class="form-wrapper">
+            <h2>Sign Up</h2>
+            <form action="#">
+                <div class="form-control">
+                    <input type="text" required>
+                    <label>Enter username</label>
+                </div>
+                <div class="form-control">
+                    <input type="text" required>
+                    <label>Email or phone number</label>
+                </div>
+                <div class="form-control">
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="form-help">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">I agree to the terms & conditions</label>
+                    </div>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a id="Login-button" href="#">Login</a></p>
+        </div>
+        </div> 
+
+        <script>
+            document.getElementById('Login-button').addEventListener('click', function() {
+                window.location.href = 'login_page.html'; // Redirect to signin.html
+            });
+        </script>
+        
+    </body>
+</html>

@@ -70,33 +70,7 @@ body{
 }
 
 
-/* h2::before{
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    color:aqua;
-    overflow: hidden;
-    animation: animate 6s linear infinite;
-    text-transform: uppercase;
-    display: flex;
-}
-    @keyframes animate{
-        0%,10%
-        {
-            color: #fff;
-            width: 0;
-        }
-        70%,90%
-        {
-            
-            width: 59vh;
-        }
-        95%,100%{
-            color: transparent;
-        }
 
-    } */
 
 
 

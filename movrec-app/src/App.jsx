@@ -9,9 +9,31 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Newmovies from './Newmovies';
 import Newseasons from './Newseasons';
 import { NavLink } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
 const App = () => {
+
+  const theme = {
+    colors: {
+      heading: "#0bd67e", // Color used for headings (extracted from .logo)
+      text: "aliceblue",  // General text color (extracted from body)
+      white: "#fff",
+      black: "#212529",  // A common dark color
+      helper: "#0bd67e", // Color used for helper elements like underlines and buttons
+      bg: "#212529",  // Background color for body
+      footer_bg: "#000",  // Assuming the footer has the same background as the body
+      btn: "#0bd67e",  // Button background color
+      border: "#0bd67e",  // Border color, if needed
+      hr: "#0bd67e",  // Horizontal rule or line color
+      gradient: "linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7))",  // Gradient used in the header background
+      shadow: "rgba(0, 0, 0, 0.2)",  // General shadow color
+      shadowSupport: "rgba(0, 0, 0, 0.5)",  // Supportive shadow color
+    },
+    media: {mobile: "768px",tab: "998px"},
+  };
+
   return (
+    <ThemeProvider theme={theme}>
     <BrowserRouter>
       <Header />
       <Routes>
@@ -24,6 +46,7 @@ const App = () => {
       </Routes>
       <Footer />
     </BrowserRouter>
+    </ThemeProvider>
   );
 }; 
 

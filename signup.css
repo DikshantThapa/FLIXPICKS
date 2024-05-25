@@ -26,10 +26,28 @@
     color:#0bd67e;
 }
 
+.logo a{
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+    padding: 0 0;
+    display: inline-flex;
+    letter-spacing: 10px;
+    align-items: baseline;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:#0bd67e;
+    transition: 0.5s, transform 0.5s;
+}
+
+.logo a:hover{    
+    color: #fff;
+    transform: translateY(-5px);
+}
 
 .logo-1,.logo-2{
     margin: 0;
-    
+    text-decoration: none;
 }
 
 .logo-1{

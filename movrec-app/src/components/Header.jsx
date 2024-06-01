@@ -24,7 +24,7 @@ const Header = () => {
 const MainHeader = styled.header`
   padding: 0 4.8rem;
   height: 10rem;
-  background-color: ${({ theme }) => theme.colors.bg};
+  background-color: ${({theme}) => theme.colors.bg};
   display:flex;
   justify-content:: space-between;
   align-items: center;
@@ -38,7 +38,7 @@ const MainHeader = styled.header`
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
-    color:#0bd67e;
+    color:${({ theme }) => theme.colors.heading};
     transition: 0.5s, transform 0.5s;
 }
 

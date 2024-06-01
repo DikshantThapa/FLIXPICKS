@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
+import backgroundImage from '../images/background-img.png';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -8,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     padding : 0;
     box-sizing: border-box;
     font-family:'Poppins', sans-serif;
+   /* background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(${backgroundImage});*/
 }
 
 html {
@@ -15,28 +17,27 @@ html {
     overflow-x: hidden;
 };
 
-h1{
-    color:${({theme}) => theme.colors.heading};
-    font-size: 6rem;
-    font-weight: 900;
-}
+// h1{
+//     color:${({theme}) => theme.colors.heading};
+//     font-size: 6rem;
+//     font-weight: 900;
+// }
 
-h2 {
-    color : ${({theme}) => theme.colors.heading};
-    font-size: 4.4rem;
-    font-weight: 300;
-    white-space: normal;
-    text-align: center;
-}
+// h2 {
+//     color : ${({theme}) => theme.colors.heading};
+//     font-size: 4.4rem;
+//     font-weight: 300;
+//     white-space: normal;
+//     text-align: center;
+// }
 
-h3 {
-    font-size: 1.8rem;
-    font-weight: 400;
-}
+// h3 {
+//     font-size: 1.8rem;
+//     font-weight: 400;
+// }
 
-p{
-    color : ${({theme}) => theme.colors.text};
-    opacity: .7;
+// p{
+ 
     font-size: 1.65rem;
     line-height: 1.5;
     margin-top : 1rem;

@@ -10,6 +10,9 @@ import Newmovies from './Newmovies';
 import Newseasons from './Newseasons';
 import { NavLink } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from './GlobalStyle';
+import styled from 'styled-components';
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
 
@@ -34,8 +37,11 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
+    <GlobalStyle />
     <BrowserRouter>
+      <AppWrapper>
       <Header />
+      <Content>
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/Browse" element={<Browse />}></Route>
@@ -44,10 +50,24 @@ const App = () => {
         <Route path="/new_movies" element={<Newmovies />}></Route>
         <Route path="/new_seasons" element={<Newseasons />}></Route>
       </Routes>
+      <ToastContainer />
+      </Content>
       <Footer />
+      </AppWrapper>
     </BrowserRouter>
+    
     </ThemeProvider>
   );
 }; 
+
+const AppWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+const Content = styled.main`
+  flex: 1;
+`;
 
 export default App;

@@ -13,6 +13,9 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './GlobalStyle';
 import styled from 'styled-components';
 import { ToastContainer } from 'react-toastify';
+import { AuthProvider } from './AuthContext';
+import Profile from './Profile';
+import Help from './help';
 
 const App = () => {
 
@@ -38,6 +41,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
     <GlobalStyle />
+    <AuthProvider>
     <BrowserRouter>
       <AppWrapper>
       <Header />
@@ -49,12 +53,15 @@ const App = () => {
         <Route path="/Sign_Up" element={<SignUp_Page />}></Route>
         <Route path="/new_movies" element={<Newmovies />}></Route>
         <Route path="/new_seasons" element={<Newseasons />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
+        <Route path="/help" element={<Help />}></Route>
       </Routes>
       <ToastContainer />
       </Content>
       <Footer />
       </AppWrapper>
     </BrowserRouter>
+    </AuthProvider>
     
     </ThemeProvider>
   );
